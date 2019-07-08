@@ -3,7 +3,7 @@ package snackBar;
 public class VendingMachine
 {
     // fields
-    private int maxId = 0;
+    private static int maxId = 0;
     private int id;
     private String name;
 
