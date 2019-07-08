@@ -19,25 +19,29 @@ public class Main
         // Vending Machine 3
         VendingMachine vm3 = new VendingMachine("Office");
 
-        // Get the id's for the vending machines
+        // Get the id's and names for the vending machines
         int foodMachineId = vm1.getMachineId();
         int drinkMachineId = vm2.getMachineId();
         int officeMachineId = vm3.getMachineId();
 
+        String foodMachineName = vm1.getMachineName();
+        String drinkMachineName = vm2.getMachineName();
+        String officeMachineName = vm3.getMachineName();
+
         // Snack 1
-        Snack snack1 = new Snack("Chips", 36, 1.75, foodMachineId);
+        Snack snack1 = new Snack("Chips", 36, 1.75, foodMachineId, foodMachineName);
 
         // Snack 2
-        Snack snack2 = new Snack("Chocolate Bar", 36, 1.00, foodMachineId);
+        Snack snack2 = new Snack("Chocolate Bar", 36, 1.00, foodMachineId, foodMachineName);
 
         // Snack 3
-        Snack snack3 = new Snack("Pretzel", 30, 2.00, foodMachineId);
+        Snack snack3 = new Snack("Pretzel", 30, 2.00, foodMachineId, foodMachineName);
 
         // Snack 4
-        Snack snack4 = new Snack("Soda", 24, 2.50, drinkMachineId);
+        Snack snack4 = new Snack("Soda", 24, 2.50, drinkMachineId, drinkMachineName);
 
         // Snack 5
-        Snack snack5 = new Snack("Water", 20, 2.75, drinkMachineId);
+        Snack snack5 = new Snack("Water", 20, 2.75, drinkMachineId, drinkMachineName);
 
         // Process #1
         snack4.buySnack(3);
@@ -105,5 +109,12 @@ public class Main
 
         // Quantity of Snack 3 after Process #7
         System.out.println("Snack #3's quantity after Process #7 = " + snack3.getQuantity());
+
+        // Stretch
+        System.out.println(snack1);
+        System.out.println(snack2);
+        System.out.println(snack3);
+        System.out.println(snack4);
+        System.out.println(snack5);
     }
 }
